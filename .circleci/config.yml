@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  test1: vjpandian/test1@0.0.1
+
 jobs:
   docker-job:
     docker:
@@ -8,6 +11,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello"
+      - vjpandian/test
 
 workflows:
   main:
